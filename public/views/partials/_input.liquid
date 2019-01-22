@@ -28,6 +28,6 @@
   {% include "modules/utils/tags/label_tag" with _field, class: labelClass, forId: _input_id, label: label, required: _required %}
   {% include _field_type with _field %}
   {% if custom_html != blank %}{{ custom_html | html_safe }}{% endif %}
-  {% include "modules/utils/tags/error" with message: _error_message %}
+  {% include "modules/utils/tags/error" with message: _error_message.first %}
 </div>
 
