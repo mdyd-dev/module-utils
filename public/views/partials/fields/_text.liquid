@@ -46,7 +46,8 @@
   class="{{ context.exports.utils.config.default_input_class }} {{ _input_class }}"
   name="{{ _name }}"
   id="{{ _input_id }}"
-  {% if placeholder != blank %} placeholder="{{ _placeholder }}"{% endif %}
+  {% if _placeholder != blank %} placeholder="{{ _placeholder }}"{% endif %}
+  {% if _autocomplete != blank %} autocomplete="{{ _autocomplete }}"{% endif %}
   {% if _readonly == true or _readonly == 'true' %} readonly {% endif %}
   {% if _required == true or _required == 'true' %} required {% endif %}
   {% if _disabled == true or _disabled == 'true' %} disabled {% endif %}
