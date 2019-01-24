@@ -10,8 +10,8 @@
       {% assign klass = flash_type %}
     {% endif %}
     {% assign flash_icon = klass | prepend: 'flash_messages.icon.' | t %}
-    <div class="alert {{ klass }}" data-flash-message="true">
-      <p>
+    <div class="alert {{ klass }} my-4" data-flash-message="true">
+      <p class="mb-0">
         <i class="{{ flash_icon }}"></i>
         {{ context.flash[flash_type] | newline_to_br }}
         <a href="#" class="close ico-close right"></a>
